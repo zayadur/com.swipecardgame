@@ -1,6 +1,13 @@
-.splashDemoInput {
+.deck {
 	display: flex;
+	flex-direction: row;
 	align-items: center;
 	justify-content: center;
 }
 
+.splashDemoInput {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
