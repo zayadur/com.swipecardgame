@@ -1,11 +1,8 @@
-.deck {
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
+body {
+	background-color: black;
 }
 
-.splashDemoInput {
+.SplashDemoFlex {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
