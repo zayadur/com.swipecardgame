@@ -7,10 +7,12 @@
         <script src="script.js"></script>
     </head>
     <body>
-        <div class="SplashDemoFlex" id="deck"></div>
-        <div class="SplashDemoFlex">
-            <button onclick="shuffle()">left</button>
-            <button onclick="shuffle()">right</button>
+        <div class="deck">
+            <div class="SplashDemoFlex" id="deck"></div>
+            <div class="SplashDemoFlex">
+                <button class="SplashDemoButton" onclick="shuffle()"><img class="invert" src="https://raw.githubusercontent.com/zayadur/com.swipecardgame/9f517f757b2c76dbc0587d010b85a0e5d591d601/InteractiveHeader/images/xmark-solid.svg" height="33px" width="33px" alt="X icon for negative vote" /></button>
+                <button class="SplashDemoButton" onclick="shuffle()"><img class="invert" src="https://raw.githubusercontent.com/zayadur/com.swipecardgame/9f517f757b2c76dbc0587d010b85a0e5d591d601/InteractiveHeader/images/heart-solid.svg" height="28px" width="28px" style="margin: 2.5px 2px 2.5px 2px" alt="Heart icon for positive vote" /></button>
+            </div>
         </div>
     </body>
 </html>
