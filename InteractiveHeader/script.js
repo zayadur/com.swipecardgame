@@ -1,3 +1,5 @@
+
+// Demonstration on SplashSection
 var cards = [
 	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/3_Tamagotchis.png",
     "https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/almost_beat_teen_pregnancy.png",
