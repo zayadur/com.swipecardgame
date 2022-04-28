@@ -23,29 +23,13 @@ function getDeck() {
 		deck.push(card);
 	}
 	return deck;
-}
-
-/* shuffle deck in random order
- *	currently shuffles 36 times
- *	maybe there's a better way to do this
-*/
-function shuffle() {
-	for (var i = 0; i < 36; i++) {
-		var position1 = Math.floor((Math.random() * deck.length));
-		var position2 = Math.floor((Math.random() * deck.length));
-		var tmp = deck[position1];
-
-		deck[position1] = deck[position2];
-		deck[position2] = tmp;
-	}
-	renderDeck();
-}
+};
 
 // target id="deck" and display 3 cards from deck
 function renderDeck() {
-	
+
 	document.getElementById('deck').innerHTML = '';
-	
+
 	for (var i = 0; i < 3; i++) {
 
 		// edge cases for 2 identical cards
@@ -68,12 +52,27 @@ function renderDeck() {
 
 		img.className += `card${i}`;	// add card[0-2] selectors to each card TEMPLATE LITERALS BABY!!!
 	}
-}
+};
+
+/* shuffle deck in random order
+ *	currently shuffles 36 times
+ *	maybe there's a better way to do this
+*/
+function shuffle() {
+	for (var i = 0; i < 36; i++) {
+		var position1 = Math.floor((Math.random() * deck.length));
+		var position2 = Math.floor((Math.random() * deck.length));
+		var tmp = deck[position1];
+
+		deck[position1] = deck[position2];
+		deck[position2] = tmp;
+	}
+	renderDeck();
+};
 
 function load() {
 	deck = getDeck();
 	shuffle();
-	renderDeck();
 }
 
 window.addEventListener('load', load);

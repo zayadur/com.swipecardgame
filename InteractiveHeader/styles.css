@@ -13,7 +13,7 @@ body {
 }
 
 .splashButtons {
-	margin: 333px 0 0 0;
+	margin: 100px 0 0 0;
 }
 
 #deck img {
@@ -24,37 +24,39 @@ body {
 }
 
 @keyframes card0 {
-	0% { transform: scale(1.3) translate(333px); opacity: 0 }
-	25% { transform: scale(1.0) translate(333px); opacity: 1 }
-	75% { transform: scale(1.0) translate(333px) }
-	100% { transform: rotate(-5deg) translate(50px) }
+	0% { opacity: 1 }
+	25% { transform: translate(333px); opacity: 1 }
+	50% { opacity: 0 }
+	75% { transform: translate(333px) }
+	100% { transform: rotate(-5deg) translate(50px); opacity: 1 }
 }
 
 @keyframes card1 {
-	0% { transform: scale(1.3); opacity: 0 }
-	100% { transform: scale(1.0); opacity: 1 }
+	0% { opacity: 0 }
+	100% { opacity: 1 }
 }
 
 @keyframes card2 {
-	0% { transform: scale(1.3) translate(-333px); opacity: 0 }
-	25% { transform: scale(1.0) translate(-333px); opacity: 1 }
-	75% { transform: scale(1.0) translate(-333px) }
-	100% { transform: rotate(5deg) translate(-50px) }
+	0% { opacity: 1 }
+	25% { transform: translate(-333px) }
+	50% { opacity: 0 }
+	75% { transform: translate(-333px) }
+	100% { transform: rotate(5deg) translate(-50px); opacity: 1 }
 }
 
 img.card0 {
     animation:
-		card0 0.8s ease normal forwards;
+		card0 0.5s ease normal forwards;
 }
 
 img.card1 {
 	animation:
-		card1 0.2s ease normal forwards;
+		card1 0.5s ease normal forwards;
 }
 
 img.card2 {
 	animation:
-		card2 0.8s ease normal forwards;
+		card2 0.5s ease normal forwards;
 }
 
 button.splashButtonLeft {
