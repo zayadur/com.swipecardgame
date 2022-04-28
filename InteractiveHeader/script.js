@@ -1,6 +1,5 @@
-
-// Demonstration on SplashSection
-var cards = [
+// Demonstration of SplashDemo
+const cards = [
 	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/3_Tamagotchis.png",
 	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/almost_beat_teen_pregnancy.png",
 	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/Big_Dick_Energy.png",
@@ -26,9 +25,12 @@ function getDeck() {
 	return deck;
 }
 
-// shuffle deck in random order, 36^2 times to ensure randomness
+/* shuffle deck in random order
+ *	currently shuffles 36 times
+ *	maybe there's a better way to do this
+*/
 function shuffle() {
-	for (var i = 0; i < 1296; i++) {
+	for (var i = 0; i < 36; i++) {
 		var position1 = Math.floor((Math.random() * deck.length));
 		var position2 = Math.floor((Math.random() * deck.length));
 		var tmp = deck[position1];
@@ -64,7 +66,7 @@ function renderDeck() {
 		card.classList.add('card');
 		document.getElementById("deck").appendChild(img);
 
-		img.className += `card${i}`;	// add card0-2 selectors to each card TEMPLATE LITERALS BABY!!!
+		img.className += `card${i}`;	// add card[0-2] selectors to each card TEMPLATE LITERALS BABY!!!
 	}
 }
 
