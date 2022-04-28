@@ -1,4 +1,9 @@
-.SplashDemoFlex {
+body {
+	background: rgb(240,83,103);
+	background: linear-gradient(90deg, rgba(240,83,103,1) 0%, rgba(237,23,126,1) 100%);
+}
+
+.splashDemoFlex {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -10,11 +15,19 @@
 	padding: 0 10px 0 10px;
 }
 
-button.SplashDemoButton {
+button.splashDemoButton {
 	background-color: #3898ec;
+    border: none;
+    height: 48px;
+    font-weight: bold;
 	border-radius: 8px;
 	color: white;
 	margin: 4px 4px 0px 4px;
+}
+
+button.splashDemoButton:active {
+	box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+    transform: scale(0.9);
 }
 
 button img.invert {
