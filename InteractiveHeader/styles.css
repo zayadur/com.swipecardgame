@@ -3,31 +3,51 @@ body {
 	background: linear-gradient(90deg, rgba(240,83,103,1) 0%, rgba(237,23,126,1) 100%);
 }
 
-.splashDemoFlex {
+.splashFlex {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: row;
+	margin: 48px;
 }
 
 #deck img {
+	box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.25);
 	max-width: 333px;
 	padding: 0 10px 0 10px;
+	border-radius: 30px;
 }
 
-button.splashDemoButton {
+img.card0 {
+	position: relative;
+	transform: rotate(-5deg);
+}
+
+img.card1 {
+	position: relative;
+}
+
+img.card2 {
+	position: relative;
+	transform: rotate(5deg);
+	left: -50px;
+}
+
+button.splashButton {
 	background-color: #3898ec;
     border: none;
-    height: 48px;
     font-weight: bold;
+	height: 48px;
 	border-radius: 8px;
 	color: white;
 	margin: 4px 4px 0px 4px;
+	padding: 0px 10px 0px 10px;
+	transition: 0.1s;
 }
 
-button.splashDemoButton:active {
-	box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
-    transform: scale(0.9);
+button.splashButton:active {
+	box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.25);
+    transform: scale(0.95);
 }
 
 button img.invert {
