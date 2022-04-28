@@ -1,6 +1,7 @@
 body {
 	background: rgb(240,83,103);
 	background: linear-gradient(90deg, rgba(240,83,103,1) 0%, rgba(237,23,126,1) 100%);
+	height: 200vh;
 }
 
 .splashFlex {
@@ -11,6 +12,10 @@ body {
 	margin: 48px;
 }
 
+.splashButtons {
+	margin: 333px 0 0 0;
+}
+
 #deck img {
 	box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.25);
 	max-width: 333px;
@@ -19,55 +24,57 @@ body {
 }
 
 @keyframes card0 {
-	from {
-		transform: scale(1.3) rotate(0deg);
+	0% {
+		transform: scale(1.3) translate(333px);
 	}
-	to {
-		transform: scale(1.0) rotate(-5deg);
+	25% {
+		transform: scale(1.0) translate(333px);
+	}
+	66% {
+		transform: scale(1.0) translate(333px);
+	}
+	100% {
+		transform: rotate(-5deg) translate(50px);
 	}
 }
 
 @keyframes card1 {
-	from {
+	0% {
 		transform: scale(1.3);
 	}
-	to {
+	100% {
 		transform: scale(1.0);
 	}
 }
 
 @keyframes card2 {
-	from {
-		transform: scale(1.3) rotate(0deg);
+	0% {
+		transform: scale(1.3) translate(-333px);
 	}
-	to {
-		transform: scale(1.0) rotate(5deg);
+	25% {
+		transform: scale(1.0) translate(-333px);
+	}
+	66% {
+		transform: scale(1.0) translate(-333px);
+	}
+	100% {
+		transform: rotate(5deg) translate(-50px);
 	}
 }
 
 img.card0 {
-	position: relative;
-	transform: rotate(-5deg);
-	left: 50px;
-
     animation:
-		card0 0.3s linear normal forwards;
+		card0 1s linear normal forwards;
 }
 
 img.card1 {
-	position: relative;
-
 	animation:
 		card1 0.3s ease-in normal forwards;
 }
 
 img.card2 {
-	position: relative;
-	transform: rotate(5deg);
-	right: 50px;
-
 	animation:
-		card2 0.3s ease-in normal forwards;
+		card2 1s ease-in normal forwards;
 }
 
 button.splashButton {
