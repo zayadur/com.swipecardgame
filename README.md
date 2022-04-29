@@ -5,7 +5,7 @@ prod: https://swipecardgame.com
 ## [Interactive Header](https://github.com/zayadur/com.swipecardgame/tree/main/InteractiveHeader): an interactive demonstration of how the game works.
 Users are asked to "swipe left" or "swipe right" on a combination of cards representing a dating profile a la using Tinder.
 
-## How was it done?
+### How was it done?
 Refer to `/InteractiveHeader/script.js`
 1. Create an array of `cards` and initialize an array to represent the player's `deck`.
 2. Add `cards` to the `deck`.
