@@ -3,7 +3,7 @@ dev: https://swipecardgame.webflow.io<br>
 prod: https://swipecardgame.com
 
 ## [Interactive Header](https://github.com/zayadur/com.swipecardgame/tree/main/InteractiveHeader): an interactive demonstration of how the game works.
-Users are asked to "swipe left" or "swipe right" on a combination of cards representing a dating profile a la using Tinder.
+Users are asked to approve or deny a dating profile represented by a combination of cards. This section demonstrates how the main game works through a pleasantly animated interaction.
 
 ### How was it done?
 Refer to `/InteractiveHeader/script.js`
