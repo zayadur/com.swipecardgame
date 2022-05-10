@@ -14,12 +14,12 @@ const cards = [
 	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/VERY_flexible.png"
 ];
 
-var deck = new Array();
+let deck = new Array();
 
 // add cards to deck
 function getDeck() {
-	for (var i = 0; i < cards.length; i++) {
-		var card = { Card: cards[i] };
+	for (let i = 0; i < cards.length; i++) {
+		let card = { Card: cards[i] };
 		deck.push(card);
 	}
 	return deck;
@@ -30,11 +30,7 @@ function renderDeck() {
 
 	document.getElementById('deck').innerHTML = '';
 
-	for (var i = 0; i < 3; i++) {
-
-		// edge cases for 2 identical cards
-		if (deck[i].Card == deck[i + 1].Card || deck[i].Card == deck[i + 2].Card) deck[i].Card = deck[i + 4].Card;
-		if (deck[i + 1].Card == deck[i + 2].Card) deck[i + 1].Card = deck[i + 3].Card;
+	for (let i = 0; i < 3; i++) {
 
 		/* Creates an <img src= "card from deck" 
 		 *	and appends individual selectors for 
@@ -43,14 +39,18 @@ function renderDeck() {
 		 *		<img src=url class=card1>
 		 *		<img src=url class=card2>
 		 */
-		var img = document.createElement("img");
-		var card = document.createElement("div");
+		let img = document.createElement("img");
+		let card = document.createElement("div");
 		img.src = deck[i].Card;
 		card.innerHTML = img;
 		card.classList.add('card');
 		document.getElementById("deck").appendChild(img);
 
 		img.className += `card${i}`;	// add card[0-2] selectors to each card TEMPLATE LITERALS BABY!!!
+
+		// // edge cases for 2 identical cards
+		// if (deck[i].Card == deck[i + 1].Card || deck[i].Card == deck[i + 2].Card) deck[i].Card = deck[i + 4].Card;
+		// if (deck[i + 1].Card == deck[i + 2].Card) deck[i + 1].Card = deck[i + 3].Card;
 	}
 };
 
@@ -59,10 +59,10 @@ function renderDeck() {
  *	maybe there's a better way to do this
 */
 function shuffle() {
-	for (var i = 0; i < 36; i++) {
-		var position1 = Math.floor((Math.random() * deck.length));
-		var position2 = Math.floor((Math.random() * deck.length));
-		var tmp = deck[position1];
+	for (let i = 0; i < 36; i++) {
+		let position1 = Math.floor((Math.random() * deck.length));
+		let position2 = Math.floor((Math.random() * deck.length));
+		let tmp = deck[position1];
 
 		deck[position1] = deck[position2];
 		deck[position2] = tmp;
