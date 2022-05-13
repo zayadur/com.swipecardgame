@@ -14,7 +14,7 @@ const cards = [
 	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/VERY_flexible.png"
 ];
 
-let deck = new Array();
+let deck = [];
 
 // add cards to deck
 function getDeck() {
@@ -23,7 +23,7 @@ function getDeck() {
 		deck.push(card);
 	}
 	return deck;
-};
+}
 
 // target id="deck" and display 3 cards from deck
 function renderDeck() {
@@ -52,7 +52,7 @@ function renderDeck() {
 		// if (deck[i].Card == deck[i + 1].Card || deck[i].Card == deck[i + 2].Card) deck[i].Card = deck[i + 4].Card;
 		// if (deck[i + 1].Card == deck[i + 2].Card) deck[i + 1].Card = deck[i + 3].Card;
 	}
-};
+}
 
 /* shuffle deck in random order
  *	currently shuffles 36 times
@@ -68,7 +68,7 @@ function shuffle() {
 		deck[position2] = tmp;
 	}
 	renderDeck();
-};
+}
 
 function load() {
 	deck = getDeck();
