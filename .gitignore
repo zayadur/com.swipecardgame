@@ -1,3 +1,6 @@
+package-lock.json
+
+# Node.gitignore (https://github.com/github/gitignore)
 # Logs
 logs
 *.log
@@ -129,8 +132,11 @@ dist
 .yarn/install-state.gz
 .pnp.*
 
+# Jetbrains.gitignore (https://github.com/github/gitignore)
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
+
+.idea
 
 # User-specific stuff
 .idea/**/workspace.xml
