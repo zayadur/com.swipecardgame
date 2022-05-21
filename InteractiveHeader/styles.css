@@ -19,7 +19,6 @@ body {
 #deck img {
 	box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.25);
 	max-width: 333px;
-	padding: 0 10px 0 10px;
 	border-radius: 30px;
 }
 
@@ -66,8 +65,8 @@ button.splashButtonLeft {
 	height: 48px;
 	border-radius: 8px;
 	color: white;
-	margin: 4px 4px 0px 4px;
-	padding: 0px 10px 0px 10px;
+	margin: 4px 4px 0 4px;
+	padding: 0 10px 0 10px;
 	transition: 0.1s;
 }
 
@@ -78,8 +77,8 @@ button.splashButtonRight {
 	height: 48px;
 	border-radius: 8px;
 	color: white;
-	margin: 4px 4px 0px 4px;
-	padding: 0px 10px 0px 10px;
+	margin: 4px 4px 0 4px;
+	padding: 0 10px 0 10px;
 	transition: 0.1s;
 }
 
@@ -91,4 +90,8 @@ button.splashButtonLeft:active {
 button.splashButtonRight:active {
 	box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.25);
     transform: scale(0.95);
+}
+
+.tooltip {
+	text-align: center;
 }

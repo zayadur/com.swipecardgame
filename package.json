@@ -1,0 +1,24 @@
+{
+  "name": "com.swipecardgame",
+  "version": "1.0.0",
+  "description": "Collection of components used on Swipe website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zayadur/com.swipecardgame.git"
+  },
+  "keywords": [
+    "javascript",
+    "jquery",
+    "webflow"
+  ],
+  "author": "zayadur",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zayadur/com.swipecardgame/issues"
+  },
+  "homepage": "https://github.com/zayadur/com.swipecardgame#readme"
+}

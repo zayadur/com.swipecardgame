@@ -18,9 +18,11 @@
             <div class="splashFlex" id="deck"></div>
             
             <div class="splashFlex splashButtons">
-                <button class="splashButtonLeft" onclick="shuffle()">Thank you, next.</button>
-                <button class="splashButtonRight" onclick="shuffle()">I'd date this person!</button>
+                <button id="leftButton" class="splashButtonLeft" onclick="shuffle(); leftTip()">Thank you, next.</button>
+                <button id="rightButton" class="splashButtonRight" onclick="shuffle(); rightTip()">I'd date this person!</button>
             </div>
+
+            <div id="tooltip" class="splashFlex tooltip"></div>
 
         </div>
 
