@@ -16,6 +16,10 @@ body {
 	margin: 100px 0 0 0;
 }
 
+#deck {
+	height: 500px;	/* default height to prevent jarring page collapse when cards load late */
+}
+
 #deck img {
 	box-shadow: 0 0 24px 4px rgba(0, 0, 0, 0.25);
 	max-width: 333px;
@@ -59,7 +63,7 @@ img.card2 {
 }
 
 button.splashButtonLeft {
-	background-color: red;
+	background-color: #f7d41e;
     border: none;
     font-weight: bold;
 	height: 48px;
@@ -71,7 +75,7 @@ button.splashButtonLeft {
 }
 
 button.splashButtonRight {
-	background-color: green;
+	background-color: #f7921d;
     border: none;
     font-weight: bold;
 	height: 48px;
@@ -82,13 +86,20 @@ button.splashButtonRight {
 	transition: 0.1s;
 }
 
+button.splashButtonLeft:hover {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+	transform: scale(1.05);
+}
 button.splashButtonLeft:active {
-	box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.25);
-    transform: scale(0.95);
+	transform: scale(0.95);
+}
+
+button.splashButtonRight:hover {
+	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
+	transform: scale(1.05);
 }
 
 button.splashButtonRight:active {
-	box-shadow: 0 0 50px 5px rgba(0, 0, 0, 0.25);
     transform: scale(0.95);
 }
 

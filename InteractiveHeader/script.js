@@ -95,26 +95,22 @@ function shuffle() {
 function leftTip() {
 	document.getElementById("leftButton").addEventListener("click", () => {
 		document.getElementById("tooltip").innerHTML =
-			`
-				Oof! Better luck next time to that bozo!
-			`
+			`<h2>Yeah, we didn't like that one either.<br>Keep going!</h2>`
 	})
 }
 
 function rightTip() {
 	document.getElementById("rightButton").addEventListener("click", () => {
 		document.getElementById("tooltip").innerHTML =
-			`
-				Nice! You just picked a winner!
-			`
+			`<h2>You just picked a winner!<br>Like what you see?<br>Help us share Swipe with the world!</h2>`
 	})
 }
 
 function load() {
 	deck = getDeck()
 	shuffle()
-	leftTip()	// not sure why I need to have this and rightTip on load, but it avoids requiring 2nd button press
-	rightTip()
+	leftTip()	// primed for displaying on click
+	rightTip()	// primed for displaying on click
 }
 
 window.addEventListener('load', load)
