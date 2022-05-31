@@ -90,6 +90,7 @@ button.splashButtonLeft:hover {
 	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
 	transform: scale(1.05);
 }
+
 button.splashButtonLeft:active {
 	transform: scale(0.95);
 }
@@ -103,6 +104,6 @@ button.splashButtonRight:active {
     transform: scale(0.95);
 }
 
-.tooltip {
+#tooltip {
 	text-align: center;
 }
