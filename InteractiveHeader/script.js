@@ -92,29 +92,9 @@ function shuffle() {
 	renderDeck()
 }
 
-function leftTip() {
-	let leftButton = document.getElementById("leftButton")
-	if(leftButton) {
-		leftButton.addEventListener("click", () => {
-			document.getElementById("tooltip").innerHTML = `<h2>Yeah, we didn't like that one either.<br>Keep going!</h2>`
-		})
-	}
-}
-
-function rightTip() {
-	let rightButton = document.getElementById("rightButton")
-	if(rightButton) {
-		rightButton.addEventListener("click", () => {
-				document.getElementById("tooltip").innerHTML = `<h2>You just picked a winner!<br>Like what you see?<br>Help us share Swipe with the world!</h2>`
-		})
-	}
-}
-
 function load() {
 	deck = getDeck()
 	shuffle()
-	leftTip()
-	rightTip()
 }
 
 window.addEventListener('load', load)

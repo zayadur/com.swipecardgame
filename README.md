@@ -18,5 +18,13 @@ Driver: `/InteractiveHeader/script.js`
 ### What does it look like?
 ![InteractiveHeaderPreview](https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeaderPreview.gif 'Preview of the interactive header section')
 
+## [About Modal](#): an about modal that displays information about the game.
+### What is this?
+Users can press a button to toggle the display state of a modal that displays in-depth information about the game.
+
+### How was it done?
+Driver: `/AboutModal/script.js`
+1. ... to be updated
+
 ## [Another function](#): reserved for another function
 ### This space is reserved for a function written in the future.
