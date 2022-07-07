@@ -1,6 +1,12 @@
 # Archive of swipecardgame.com functions
-dev: https://swipecardgame.webflow.io<br>
-prod: https://swipecardgame.com
+preview: https://swipecardgame.webflow.io<br>
+live: https://swipecardgame.com
+
+This is a collection of "components" that are on the Swipe👆 website, powered by [Webflow](https://webflow.com/).
+
+Each component is separated into its own directory with a relevant `script.js` file.
+
+Ideally, one would want to copy the contents of each file into their `</body>` box under the relevant page's settings.
 
 ## [Interactive Header](https://github.com/zayadur/com.swipecardgame/tree/main/InteractiveHeader): an interactive demonstration of how the game works.
 
@@ -44,3 +50,8 @@ Driver: `/MatchModal/script.js`
 5. Upon clicking `ok`, `deleteDeck()`, where `deck` div is targeted via class name `splashFlex` and removed with `removeChild`.
 
 Functions `saveDeck()` and `deleteDeck()` are in `InteractiveHeader/script.js`
+
+# Setting up on Webflow
+1. Copy code from `script.js` files for each component into the `</body>` box under page settings, ideally separating each script with `<script>` tags.
+2. Copy entirety of `styles.css` in `/InteractiveHeader` into the `<head>` box under page settings.
+3. Update styles as needed.
