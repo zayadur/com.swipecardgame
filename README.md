@@ -22,7 +22,7 @@ Driver: `/InteractiveHeader/script.js`
 Users can press a button to toggle the display state of a modal that displays in-depth information about the game.
 
 ### What does it look like?
-![AboutModalPreview](https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/AboutModal/Preview.gif 'Preview of the interactive header section')
+![AboutModalPreview](https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/AboutModal/Preview.gif 'Preview of the about modal')
 
 ### How was it done?
 Driver: `/AboutModal/script.js`
@@ -34,7 +34,7 @@ Driver: `/AboutModal/script.js`
 If a user clicks "oh yes" to confirm a match, a popup window opens up re-rendering the deck and presenting more information about the next game state.
 
 ### What does it look like?
-![MatchModalPreview](https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/MatchModal/Preview.gif 'Preview of the interactive header section')
+![MatchModalPreview](https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/MatchModal/Preview.gif 'Preview of the match modal')
 
 ### How was it done?
 Driver: `/MatchModal/script.js`
