@@ -1,47 +1,16 @@
-// Demonstration of SplashDemo
-const cards = [
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/1.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/5.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/9.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/25.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/32.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/42.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/44.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/45.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/46.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/59.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/68.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/80.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/92.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/108.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/113.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/121.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/135.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/137.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/142.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/151.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/156.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/187.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/191.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/203.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/214.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/218.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/221.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/228.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/231.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/257.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/273.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/282.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/288.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/299.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/304.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/313.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/319.png",
-	"https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/328.png"
-
+// Demonstration on SplashDemo
+const cardIds = [
+	1, 5, 9, 25, 32, 42, 44, 45, 46, 59, 68, 80, 92, 108, 113, 121, 135, 137, 142,
+	151, 156, 187, 191, 203, 214, 218, 221, 228, 231, 257, 273, 282, 288, 299,
+	304, 313, 319, 328,
 ];
-
+const cardPath = "https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/";
 let deck = []
+let cards = [];
+
+for (let i = 0; i < cardIds.length; i++) {
+	cards.push(cardPath + cardIds[i] + ".png");
+}
 
 // add cards to deck
 function getDeck() {
@@ -55,7 +24,7 @@ function getDeck() {
 // target id="deck" and display 3 cards from deck
 function renderDeck() {
 
-	document.getElementById('deck').innerHTML = ''	// resets render on shuffle
+	document.getElementById("deck").innerHTML = ''	// resets render on shuffle
 
 	for (let i = 0; i < 3; i++) {
 
@@ -69,15 +38,24 @@ function renderDeck() {
 		let img = document.createElement("img")
 		let card = document.createElement("div")
 		img.src = deck[i].Card
-		card.classList.add('card')
+		card.classList.add("card")
 		document.getElementById("deck").appendChild(img)
-
 		img.className += `card${i}`	// add card[0-2] selectors to each card -- TEMPLATE LITERALS BABY!!!
 	}
 }
 
+function saveDeck() {
+	const deckTarget = document.getElementById("deck")
+	const deckClone = deckTarget.cloneNode(true)
+	document.getElementById("rightPopup-content").appendChild(deckClone)
+}
+
+function deleteDeck() {
+	const deckTarget = document.getElementById("rightPopup-content").getElementsByClassName("splashFlex")[0]
+	document.getElementById("rightPopup-content").removeChild(deckTarget)
+}
+
 /* shuffle deck in random order
- *	currently shuffles 36 times
  *	maybe there's a better way to do this
 */
 function shuffle() {

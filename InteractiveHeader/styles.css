@@ -1,23 +1,13 @@
-body {
-	background: rgb(240,83,103);
-	background: linear-gradient(90deg, rgba(240,83,103,1) 0%, rgba(237,23,126,1) 100%);
-	height: 200vh;
-}
-
 .splashFlex {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: row;
-	margin: 48px;
-}
-
-.splashButtons {
-	margin: 100px 0 0 0;
+	padding: 0 0 33px 0;
 }
 
 #deck {
-	height: 500px;	/* default height to prevent jarring page collapse when cards load late */
+	min-height: 500px;
 }
 
 #deck img {
@@ -27,100 +17,533 @@ body {
 }
 
 @keyframes card0 {
-	0% { opacity: 1 }
-	25% { transform: translate(333px); opacity: 1 }
-	50% { opacity: 0 }
-	75% { transform: translate(333px) }
-	100% { transform: rotate(-5deg) translate(50px); opacity: 1 }
+	0% {
+		opacity: 1
+	}
+
+	25% {
+		transform: translate(333px);
+		opacity: 1
+	}
+
+	50% {
+		opacity: 0
+	}
+
+	75% {
+		transform: translate(333px)
+	}
+
+	100% {
+		transform: rotate(-5deg) translate(50px);
+		opacity: 1
+	}
 }
 
 @keyframes card1 {
-	0% { opacity: 0 }
-	100% { opacity: 1 }
+	0% {
+		opacity: 0
+	}
+
+	100% {
+		opacity: 1
+	}
 }
 
 @keyframes card2 {
-	0% { opacity: 1 }
-	25% { transform: translate(-333px) }
-	50% { opacity: 0 }
-	75% { transform: translate(-333px) }
-	100% { transform: rotate(5deg) translate(-50px); opacity: 1 }
+	0% {
+		opacity: 1
+	}
+
+	25% {
+		transform: translate(-333px)
+	}
+
+	50% {
+		opacity: 0
+	}
+
+	75% {
+		transform: translate(-333px)
+	}
+
+	100% {
+		transform: rotate(5deg) translate(-50px);
+		opacity: 1
+	}
 }
 
 img.card0 {
-    animation:
-		card0 0.5s ease normal forwards;
+	animation:
+		card0 0.8s ease normal forwards;
 }
 
 img.card1 {
 	animation:
-		card1 0.5s ease normal forwards;
+		card1 0.8s ease normal forwards;
 }
 
 img.card2 {
 	animation:
-		card2 0.5s ease normal forwards;
+		card2 0.8s ease normal forwards;
 }
 
-button.splashButtonLeft {
-	background-color: #f7d41e;
-    border: none;
-    font-weight: bold;
-	height: 48px;
-	border-radius: 8px;
-	color: white;
-	margin: 4px 4px 0 4px;
-	padding: 0 10px 0 10px;
-	transition: 0.1s;
-}
-
-button.splashButtonRight {
-	background-color: #f7921d;
-    border: none;
-    font-weight: bold;
-	height: 48px;
-	border-radius: 8px;
-	color: white;
-	margin: 4px 4px 0 4px;
-	padding: 0 10px 0 10px;
-	transition: 0.1s;
-}
-
-button.splashButtonAbout {
-	background-color: #00b5c8;
+button.splashButton {
+	background-color: #f5f5f5;
 	border: none;
 	font-weight: bold;
 	height: 48px;
 	border-radius: 8px;
-	color: white;
-	margin: 4px 4px 0 4px;
-	padding: 0 10px 0 10px;
+	margin: 4px 4px 0px 4px;
+	padding: 0px 10px 0px 10px;
 	transition: 0.1s;
 }
 
-button.splashButtonLeft:hover {
+span.gradient-text {
+	background: linear-gradient(90deg, #f06357, #ec217d);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+button.splashButton:hover {
 	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
 	transform: scale(1.05);
 }
 
-button.splashButtonLeft:active {
-	transform: scale(0.95);
+.aboutPopup {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: rgba(0, 0, 0, 0.67);
+	width: 100%;
+	height: 100%;
+	display: none;
 }
 
-button.splashButtonRight:hover {
-	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
-	transform: scale(1.05);
+.aboutPopup-content {
+	color: #000000;
+	width: 800px;
+	margin: 0 auto;
+	padding: 40px;
+	margin-top: 200px;
+	border-radius: 10px;
+	background: #fff;
+	position: relative;
 }
 
-button.splashButtonRight:active {
-    transform: scale(0.95);
+.aboutPopup-close {
+	position: absolute;
+	top: 5px;
+	right: 12px;
 }
 
-button.splashButtonAbout:hover {
-	box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.25);
-	transform: scale(1.05);
+.rightPopup {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: rgba(0, 0, 0, 0.67);
+	width: 100%;
+	height: 100%;
+	display: none;
 }
 
-button.splashButtonAbout:active {
-	transform: scale(0.95);
+.rightPopup-content {
+	color: #000000;
+	width: 800px;
+	margin: 0 auto;
+	padding: 40px;
+	margin-top: 200px;
+	border-radius: 10px;
+	background: #f5f5f5;
+	position: relative;
+}
+
+.rightPopup-content img {
+	max-width: 234px;
+}
+
+.rightPopup-close {
+	position: absolute;
+	top: 5px;
+	right: 12px;
+}
+
+@media only screen and (max-width: 2560px) {
+	#deck {
+		min-height: 600px;
+	}
+
+	#deck img {
+		box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.25);
+		max-width: 333px;
+		border-radius: 30px;
+	}
+}
+
+@media only screen and (max-width: 1440px) {
+	#deck {
+		min-height: 500px;
+	}
+
+	#deck img {
+		box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.25);
+		max-width: 300px;
+		border-radius: 15px;
+	}
+
+	@keyframes card0 {
+		0% {
+			opacity: 1
+		}
+
+		25% {
+			transform: translate(234px);
+			opacity: 1
+		}
+
+		50% {
+			opacity: 0
+		}
+
+		75% {
+			transform: translate(234px)
+		}
+
+		100% {
+			transform: rotate(-5deg) translate(50px);
+			opacity: 1
+		}
+	}
+
+	@keyframes card2 {
+		0% {
+			opacity: 1
+		}
+
+		25% {
+			transform: translate(-234px)
+		}
+
+		50% {
+			opacity: 0
+		}
+
+		75% {
+			transform: translate(-234px)
+		}
+
+		100% {
+			transform: rotate(5deg) translate(-50px);
+			opacity: 1
+		}
+	}
+}
+
+@media only screen and (max-width: 1024px) {
+	#deck {
+		min-height: 400px;
+	}
+
+	#deck img {
+		box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.25);
+		max-width: 234px;
+		border-radius: 15px;
+	}
+
+	@keyframes card0 {
+		0% {
+			opacity: 1
+		}
+
+		25% {
+			transform: translate(111px);
+			opacity: 1
+		}
+
+		50% {
+			opacity: 0
+		}
+
+		75% {
+			transform: translate(111px)
+		}
+
+		100% {
+			transform: rotate(-3deg) translate(50px);
+			opacity: 1
+		}
+	}
+
+	@keyframes card2 {
+		0% {
+			opacity: 1
+		}
+
+		25% {
+			transform: translate(-111px)
+		}
+
+		50% {
+			opacity: 0
+		}
+
+		75% {
+			transform: translate(-111px)
+		}
+
+		100% {
+			transform: rotate(3deg) translate(-50px);
+			opacity: 1
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	#deck {
+		min-height: 400px;
+	}
+
+	#deck img {
+		box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.25);
+		max-width: 200px;
+		border-radius: 10px;
+	}
+
+	.aboutPopup-content,
+	.rightPopup-content {
+		max-width: 700px;
+	}
+
+	.aboutPopup-content,
+	.rightPopup-content h2 {
+		font-size: 48px;
+	}
+
+	.aboutPopup-content,
+	.rightPopup-content p {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (max-width: 425px) {
+	#deck {
+		min-height: 400px;
+	}
+
+	#deck img {
+		box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.25);
+		max-width: 140px;
+		border-radius: 10px;
+	}
+
+	@keyframes card0 {
+		0% {
+			opacity: 1
+		}
+
+		25% {
+			transform: translate(123px);
+			opacity: 1
+		}
+
+		50% {
+			opacity: 0
+		}
+
+		75% {
+			transform: translate(123px)
+		}
+
+		100% {
+			transform: rotate(-3deg) translate(50px);
+			opacity: 1
+		}
+	}
+
+	@keyframes card2 {
+		0% {
+			opacity: 1
+		}
+
+		25% {
+			transform: translate(-123px)
+		}
+
+		50% {
+			opacity: 0
+		}
+
+		75% {
+			transform: translate(-123px)
+		}
+
+		100% {
+			transform: rotate(3deg) translate(-50px);
+			opacity: 1
+		}
+	}
+
+	.aboutPopup-content,
+	.rightPopup-content {
+		max-width: 400px;
+	}
+
+	.aboutPopup-content,
+	.rightPopup-content h2 {
+		font-size: 32px;
+	}
+
+	.aboutPopup-content,
+	.rightPopup-content p {
+		font-size: 16px;
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	#deck {
+		min-height: 350px;
+	}
+
+	#deck img {
+		box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.25);
+		max-width: 120px;
+		border-radius: 10px;
+	}
+
+	@keyframes card0 {
+		0% {
+			opacity: 1
+		}
+
+		25% {
+			transform: translate(123px);
+			opacity: 1
+		}
+
+		50% {
+			opacity: 0
+		}
+
+		75% {
+			transform: translate(123px)
+		}
+
+		100% {
+			transform: rotate(-3deg) translate(50px);
+			opacity: 1
+		}
+	}
+
+	@keyframes card2 {
+		0% {
+			opacity: 1
+		}
+
+		25% {
+			transform: translate(-123px)
+		}
+
+		50% {
+			opacity: 0
+		}
+
+		75% {
+			transform: translate(-123px)
+		}
+
+		100% {
+			transform: rotate(3deg) translate(-50px);
+			opacity: 1
+		}
+	}
+
+	.aboutPopup-content,
+	.rightPopup-content {
+		max-width: 350px;
+	}
+
+	.aboutPopup-content,
+	.rightPopup-content h2 {
+		font-size: 24px;
+	}
+
+	.aboutPopup-content,
+	.rightPopup-content p {
+		font-size: 14px;
+	}
+}
+
+@media only screen and (max-width: 320px) {
+	#deck {
+		min-height: 200px;
+	}
+
+	#deck img {
+		box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.25);
+		max-width: 100px;
+		border-radius: 10px;
+	}
+
+	@keyframes card0 {
+		0% {
+			opacity: 1
+		}
+
+		25% {
+			transform: translate(123px);
+			opacity: 1
+		}
+
+		50% {
+			opacity: 0
+		}
+
+		75% {
+			transform: translate(123px)
+		}
+
+		100% {
+			transform: rotate(-3deg) translate(50px);
+			opacity: 1
+		}
+	}
+
+	@keyframes card2 {
+		0% {
+			opacity: 1
+		}
+
+		25% {
+			transform: translate(-123px)
+		}
+
+		50% {
+			opacity: 0
+		}
+
+		75% {
+			transform: translate(-123px)
+		}
+
+		100% {
+			transform: rotate(3deg) translate(-50px);
+			opacity: 1
+		}
+	}
+
+	.aboutPopup-content,
+	.rightPopup-content {
+		max-width: 300px;
+	}
+
+	.aboutPopup-content,
+	.rightPopup-content h2 {
+		font-size: 24px;
+	}
+
+	.aboutPopup-content,
+	.rightPopup-content p {
+		font-size: 14px;
+	}
 }

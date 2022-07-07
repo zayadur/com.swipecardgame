@@ -1,47 +1,23 @@
-class Modal {
-    constructor(modal, target) {
-        this.isOpen = false;
-        this.modal = modal;
-        this.target = target;
-        this.closeModal = modal.querySelectorAll('[data-close]');
+// var Webflow = Webflow || [];   this array is declared at the top and wraps jQuery functions
 
-        this.target.addEventListener("click", (e) => {
-            if (this.isOpen) {
-                return this.close();
-            }
-            return this.open();
-        });
-        this.closeModal.forEach(item => {
-            item.addEventListener("click", (e) => {
-                this.close();
-            });
-        });
-    }
+Webflow.push(function () {
+  $(document).ready(function () {
 
-    open() {
-        this.modal.classList.add('show-modal');
-        setTimeout(() => {
-            this.animateIn();
-        }, 10);
-    }
+    $('.aboutPopup-open').on('click', function () {
+      $('.aboutPopup').fadeIn(300);
+    });
 
-    close() {
-        this.animateOut();
-        setTimeout(() => {
-            this.modal.classList.remove('show-modal');
-        }, 250);
-    }
+    $('.aboutPopup-close').on('click', function () {
+      $('.aboutPopup').fadeOut(300);
+    });
 
-    animateIn() {
-        this.modal.classList.add('animate-modal');
-    }
+    // close when clicking outside of popup
+    $('.aboutPopup').on('click', function () {
+      $('.aboutPopup').fadeOut(300);
+    }).children().click(function () {
+      return false;
+    });
 
-    animateOut() {
-        this.modal.classList.remove('animate-modal');
-    }
-}
+  });
+});
 
-const modal = new Modal(
-    document.querySelector('.modal'),
-    document.querySelector('[data-toggle="modal"]')
-)
