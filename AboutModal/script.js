@@ -11,13 +11,6 @@ Webflow.push(function () {
       $('.aboutPopup').fadeOut(300);
     });
 
-    // close when clicking outside of popup
-    $('.aboutPopup').on('click', function () {
-      $('.aboutPopup').fadeOut(300);
-    }).children().click(function () {
-      return false;
-    });
-
   });
 });
 
