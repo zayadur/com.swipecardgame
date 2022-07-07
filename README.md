@@ -9,11 +9,13 @@ Users are asked to approve or deny a dating profile represented by a combination
 
 ### How was it done?
 Driver: `/InteractiveHeader/script.js`
-1. Create an array of `cards` and initialize an array to represent the player's `deck`.
-2. Add `cards` to the `deck`.
-3. `render()` renders 3 cards from the deck and creates HTML objects.
-4. `shuffle()` randomly shuffles the deck to display a random set.
+1. Create an array of `cards` and pull card images from this repository.
+2. Initialize an array to represent the player's `deck`.
+2. Add `cards` to the `deck` using `getDeck()`
+3. `render()` renders 3 cards from the deck and creates HTML objects that are injected into the DOM with `appendChild`.
+4. `shuffle()` randomly shuffles the deck.
 5. A window event listener loads these functions on page load.
+6. Upon clicking "ew no" `shuffle()` runs which also re-runs `render()` to display a new set of cards.
 
 ## [About Modal](#): an about modal that displays information about the game.
 ### What is this?
@@ -41,4 +43,4 @@ Driver: `/MatchModal/script.js`
 3. On first toggle, popup is displayed and `saveDeck()` runs, where `deck` is re-rendered inside popup with `cloneNode(true)`.
 5. Upon clicking `ok`, `deleteDeck()`, where `deck` div is targeted via class name `splashFlex` and removed with `removeChild`.
 
-Functions `saveDeck()` and `deleteDeck()` are in [`InteractiveHeader/script.js`](https://github.com/zayadur/com.swipecardgame/blob/main/InteractiveHeader/script.js)
+Functions `saveDeck()` and `deleteDeck()` are in `InteractiveHeader/script.js`
