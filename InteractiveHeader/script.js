@@ -2,7 +2,7 @@
 const cardIds = [
 	1, 5, 9, 25, 32, 42, 44, 45, 46, 59, 68, 80, 92, 108, 113, 121, 135, 137, 142,
 	151, 156, 187, 191, 203, 214, 218, 221, 228, 231, 257, 273, 282, 288, 299,
-	304, 313, 319, 328,
+	304, 313, 319, 328, 346,
 ];
 const cardPath = "https://raw.githubusercontent.com/zayadur/com.swipecardgame/main/InteractiveHeader/images/cards/";
 let deck = []
